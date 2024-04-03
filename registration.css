@@ -1,0 +1,83 @@
+body {
+    background-image: url("download\ \(1\).jpg"); /* Replace with your desired image URL */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; /* Center the image */
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    background-color: rgba(201, 238, 238, 0.8); /* White background with 20% transparency */
+    border: 2px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for inner elements */
+    width: 400px; /* Fixed width for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+legend {
+    font-size: 20px; /* Adjusted font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Centered text */
+    margin-bottom: 10px; /* Margin for spacing */
+    color: #333; /* Dark gray text color */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Consistent margin for spacing */
+}
+
+label {
+    display: block; /* Block-level elements for proper aligning */
+    margin-bottom: 5px; /* Margin for spacing */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark gray text color */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+    width: 100%; /* Full width for input fields */
+    padding: 8px; /* Consistent padding for better appearance */
+    border: 1px solid #ccc; /* Solid border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%; /* Full width for textarea */
+    padding: 8px; /* Consistent padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 100px; /* Set a minimum height for the textarea */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable behavior */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
