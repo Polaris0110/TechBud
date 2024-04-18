@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script>
+        function validateForm() {
+            var fname = document.querySelector('input[name="fname"]').value;
+            var lname = document.querySelector('input[name="lname"]').value;
+            var mno = document.querySelector('input[name="mno"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var uname = document.querySelector('input[name="uname"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+            var confirmPassword = document.querySelector('input[name="confirmPassword"]').value;
+    
+            // Perform validation checks here
+            if (fname === '' || lname === '' || mno === '' || uname === '' || password === '' || confirmPassword === '') {
+                alert('All fields are required!');
+                return false;
+            }
+    
+            if (!validateEmail(email)) {
+                alert('Invalid email address!');
+                return false;
+            }
+    
+            if (password.length < 7 || password.length > 10) {
+                alert('Password must be between 7 and 10 characters long!');
+                return false;
+            }
+    
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+    
+            return true;
+        }
+    
+        function validateEmail(email) {
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+    </script>
+    
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="container-nav">
+        <div class="header">
+            TechBud
+        </div>
+
+        <div class="nav">
+            <a href="login.html">Home</a>
+            <a href="login.html">Hackathons</a>
+            <a href="login.html">Courses</a>
+            <!-- <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="login.html">Login</a></button> -->
+        </div>
+    </div>
+    <hr />
+    <form action="signup.php" method="post" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>SIGNUP</legend>
+            <label for="fname">First Name:</label><br>
+            <input type="text" name="fname" placeholder="First name"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" name="lname" placeholder="Last name"><br>
+            <label for="mobileNo" maxlength="10" minlength="10">Mobile Number:</label><br>
+            <input type="number" name="mno" placeholder="Mobile number"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" placeholder="Email"><br>
+            <label for="username">Username:</label><br>
+            <input type="text" name="uname" placeholder="Username"><br>
+            <label for="enterPass">Enter Password:</label><br>
+            <input type="password" name="password" placeholder=" Enter password" minlength="7" maxlength="10"><br>
+            <label for="confirmPass">Confirm Password:</label><br>
+            <input type="password" name="confirmPassword" placeholder="Confirm password" minlength="7"
+                maxlength="10"><br>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Others">Others<br>
+            <button style="margin: 14px;">Confirm</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

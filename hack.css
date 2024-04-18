@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./Images/M10.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+
+.hackathon-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.hackathon-info img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.details {
+    margin-left: 20px;
+}
+
+.details p {
+    margin-bottom: 10px;
+}
+
+.details p span {
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.nav,
+a {
+    text-align: right;
+    text-decoration: none;
+    color: black; 
+    font-size: 1.1rem;
+    margin: 3px;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header {
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+img{
+    border-radius: 17px;
+}

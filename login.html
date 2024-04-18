@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("password").value;
+
+            if (uname.trim() === "") {
+                alert("Please enter a username.");
+                return;
+            }
+
+            if (password.trim() === "") {
+                alert("Please enter a password.");
+                return;
+            }
+
+            console.log("Username:", uname);
+            console.log("Password:", password);
+        })
+    </script>
+    <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+    <div class="container-nav">
+        <div class="header">
+            TechBud
+        </div>
+
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="hackathons.html">Hackathons</a>
+            <a href="courses.html">Courses</a>
+            <!-- <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="login.html">Login</a></button> -->
+        </div>
+    </div>
+    <hr />
+    <form action="login.php" method="post">
+        <fieldset>
+            <legend>LOGIN</legend>
+            <label for="uname">Username</label><br>
+            <input type="text" placeholder="Username" name="uname"><br>
+            <label for="password" >Password</label><br>
+            <input type="password" placeholder="Password" name="password"><br>
+            <button type="submit">Login</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <script>
+        function validateForm() {
+            var universityName = document.querySelector('input[name="universityName"]').value;
+            var teamLeader = document.querySelector('input[name="teamLeader"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var phoneNo = document.querySelector('input[name="phoneNo"]').value;
+            var regNoLeader = document.querySelector('input[name="regNoLeader"]').value;
+            var regNoMember1 = document.querySelector('input[name="regNoMember1"]').value;
+            var regNoMember2 = document.querySelector('input[name="regNoMember2"]').value;
+            var regNoMember3 = document.querySelector('input[name="regNoMember3"]').value;
+    
+            var teamMembers = document.querySelectorAll('input[name^="member"]');
+            for (var i = 0; i < teamMembers.length; i++) {
+                if (teamMembers[i].value === '') {
+                    alert('Please fill out all team members');
+                    return false;
+                }
+            }
+    
+            if (universityName === '' || teamLeader === '' || phoneNo === '' || regNoLeader === '' || regNoMember1 === '' || regNoMember2 === '' || regNoMember3 === '') {
+                alert("All fields must be filled out");
+                return false;
+            }
+    
+            // Email validation using regular expression
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email format");
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+    
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <div class="container-nav">
+        <div class="header">
+            TechBud
+        </div>
+
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="hackathons.html">Hackathons</a>
+            <a href="courses.html">Courses</a>
+            <!-- <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="login.html">Login</a></button> -->
+        </div>
+    </div>
+    <hr />
+    <form action="registration.php" method="post" onsubmit="return validateForm()">
+    <fieldset>
+    <legend>REGISTER</legend>
+    <label for="universityName">University Name:</label><br>
+    <input type="text" name="universityName" placeholder="University Name"><br>
+    <label for="teamLeader">Name of team leader:</label><br>
+    <input type="text" name="teamLeader" placeholder="Name of Team Leader"><br>
+
+    <label for="email">Email ID:</label><br>
+    <input type="email" name="email" placeholder="Email ID"><br>
+    <label for="phoneNo" maxlength="10" minlength="10">Phone Number:</label><br>
+    <input type="number" name="phoneNo" placeholder="Phone Number"><br>
+    <label for="regNoLeader">Leader Registration Number:</label><br>
+    <input type="number" name="regNoLeader" placeholder="Leader Registration Number"><br>
+    <label for="member1">Team member 1:</label><br>
+    <input type="text" name="member1" placeholder="Team member 1"><br>
+    <label for="regNoMember1">Member 1 Registration Number:</label><br>
+    <input type="number" name="regNoMember1" placeholder="Member 1 Registration Number"><br>
+    <label for="member2">Team member 2:</label><br>
+    <input type="text" name="member2" placeholder="Team member 2"><br>
+    <label for="regNoMember2">Member 2 Registration Number:</label><br>
+    <input type="number" name="regNoMember2" placeholder="Member 2 Registration Number"><br>
+    <label for="member3">Team member 3:</label><br>
+    <input type="text" name="member3" placeholder="Team member 3"><br>
+    <label for="regNoMember3">Member 3 Registration Number:</label><br>
+    <input type="number" name="regNoMember3" placeholder="Member 3 Registration Number"><br>
+    <button type="submit">Register</button>
+</fieldset>
+</form>
+</body>
+</html>
